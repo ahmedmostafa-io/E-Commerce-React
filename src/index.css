@@ -1,0 +1,46 @@
+@import "tailwindcss";
+/* @import "~react-image-gallery/styles/css/image-gallery.css"; */
+
+@utility container {
+  margin: auto;
+  width: 90%;
+  @media (width >= 80rem /* 1280px */) {
+    max-width: 78rem /* 1280px */;
+  }
+  @media (width >= 96rem /* 1536px */) {
+    max-width: 90rem /* 1536px */;
+  }
+}
+@theme {
+  --color-main: #0aad0a;
+  --color-main-light: #0bbb1a;
+  --color-light: #f0f3f2;
+  --color-rate: #ffc908;
+  --font-encode: "Encode Sans Expanded", sans-serif;
+}
+body {
+  font-family: "Inter Variable", sans-serif;
+}
+@layer components {
+  .input {
+    @apply bg-white px-1 py-2 rounded-md focus:outline-0;
+  }
+  .btn {
+    @apply bg-main text-white rounded-md py-1 px-2 cursor-pointer;
+  }
+}
+@keyframes fillInsideCart {
+  0% {
+    transform: translateY(100%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.animate-fillInsideCart {
+  animation: fillInsideCart 2.5s infinite ease-in-out;
+}
