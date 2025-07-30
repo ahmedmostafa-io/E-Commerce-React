@@ -1,5 +1,5 @@
 import amazonLogo from "../assets/images/amazon-pay.png";
-import americanLogo from "../assets/images/American-Express-color.png";
+import americanLogo from "../assets/images/American-Express-Color.png";
 import masterLogo from "../assets/images/mastercard.webp";
 import paypalLogo from "../assets/images/paypal.png";
 import googleLogo from "../assets/images/get-google-play.png";
