@@ -105,7 +105,9 @@ export default function App() {
           <DefaultFetchContext>
             <FavCartProvider>
               <CartProvider>
-                <RouterProvider router={routes} />
+                <Suspense fallback={<Loading />}>
+                  <RouterProvider router={routes} />
+                </Suspense>
                 <Toaster />
                 <ReactQueryDevtools />
               </CartProvider>
