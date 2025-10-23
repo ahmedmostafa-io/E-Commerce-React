@@ -64,7 +64,7 @@ export default function ProductDetails() {
 
     getProduct();
     return () => controller.abort();
-  }, [id]);
+  }, [id, setIsLoading, setError, setProduct]);
 
   // Fetch related products
   useEffect(() => {
@@ -84,7 +84,7 @@ export default function ProductDetails() {
 
     if (product) getRelatedProduct();
     return () => controller.abort();
-  }, [product]);
+  }, [product, setError, setRelatedProducts]);
 
   // Save rating
   useEffect(() => {
@@ -106,11 +106,12 @@ export default function ProductDetails() {
   }, [product]);
 
   if (isLoading) return <Loading />;
-  if (error) return <Error error={error.toString()} />;
+  if (error) return <Error error={error?.message} />;
   if (!product) return <Loading />;
 
   return (
     <div className="mt-28 mb-8">
+      <meta name="description" content={product.description} />
       <div className="md:grid md:gap-16 md:grid-cols-12 flex-col space-y-7">
         {/* Images */}
         <div className="md:col-span-4">

@@ -12,7 +12,6 @@ export default function Categories() {
       const response = await axios.get(
         "https://ecommerce.routemisr.com/api/v1/categories"
       );
-      console.log(response);
       return response.data.data;
     },
     staleTime: 1000,

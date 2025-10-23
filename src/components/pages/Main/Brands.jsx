@@ -103,6 +103,7 @@ export default function Brands() {
               title={brand.name}
               className="block w-full focus:outline-none cursor-pointer"
             >
+              <meta name="description" content={brand.name} />
               <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-4 flex flex-col items-center justify-center h-48 group">
                 <img
                   src={brand.image}
@@ -121,7 +122,6 @@ export default function Brands() {
       {/* عرض المنتجات الخاصة بالبراند المختار */}
       {selectedBrandId && (
         <div className="mt-10">
-          {/* زر إغلاق */}
           <div className="flex justify-end mb-4">
             <button
               onClick={() => {
@@ -149,6 +149,7 @@ export default function Brands() {
                   key={product._id}
                   className="bg-white p-4 rounded-xl shadow hover:shadow-lg transition-all"
                 >
+                  <meta name="description" content={product.title} />
                   <img
                     src={product.imageCover}
                     alt={product.title}

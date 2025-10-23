@@ -47,7 +47,7 @@ export default function CategoryProducts() {
     }
 
     getProductsByCategory();
-  }, [categoryId]);
+  }, [categoryId, setError, setIsLoading]);
 
   if (isLoading) return <Loading />;
   if (error) return <Error error={error} />;
@@ -59,6 +59,7 @@ export default function CategoryProducts() {
           key={product._id}
           className="card shadow-2xl rounded-lg bg-white group/card"
         >
+          <meta name="description" content={product.title} />
           <title>{product.category.name}</title>
           <div className="relative overflow-hidden">
             <img
