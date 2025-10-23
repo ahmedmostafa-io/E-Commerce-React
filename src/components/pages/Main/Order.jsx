@@ -20,11 +20,12 @@ export default function Order() {
       }
     }
     getUserOrders();
-  }, []);
+  }, [id]);
 
   return (
     <>
       <title>Order</title>
+      <meta name="description" content="all FreshCart Orders" />
       {allOrders === null ? (
         <Loading />
       ) : (

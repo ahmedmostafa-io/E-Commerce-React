@@ -64,6 +64,7 @@ export default function Home() {
 
   return (
     <div className="pt-14">
+      <meta name="description" content="FreshCart home page " />
       <title>Home Page</title>
       <MainSlider />
       <CategorySlider />

@@ -37,7 +37,7 @@ export default function Products() {
       }
     }
     fetchData();
-  }, []);
+  }, [setError]);
 
   useEffect(() => {
     let updated = [...products];
@@ -149,6 +149,7 @@ export default function Products() {
                   key={product._id}
                   className="bg-white border border-gray-100 rounded-3xl shadow-md overflow-hidden group relative transition-transform duration-300 hover:shadow-xl hover:-translate-y-1"
                 >
+                  <meta name="description" content={product.title} />
                   {/* Image + Overlay Icons */}
                   <div className="relative h-64 bg-gray-100 flex items-center justify-center overflow-hidden">
                     <img
