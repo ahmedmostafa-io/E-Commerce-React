@@ -11,7 +11,7 @@ export default function Cart() {
     useContext(CartContext);
   useEffect(() => {
     refreshCart();
-  }, [cartInfo]);
+  }, [cartInfo, refreshCart]);
   if (isLoading || cartInfo === null) return <Loading />;
 
   const { products, totalCartPrice } = cartInfo.data;

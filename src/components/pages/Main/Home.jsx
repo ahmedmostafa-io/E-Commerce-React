@@ -46,7 +46,7 @@ export default function Home() {
     }
 
     getProducts();
-  }, []);
+  }, [setError, setIsLoading]);
 
   useEffect(() => {
     if (!searchQuery) {

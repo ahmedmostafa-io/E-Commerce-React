@@ -20,7 +20,7 @@ export default function Card({ product }) {
   return (
     <div className="card shadow-2xl rounded-lg bg-white group/card">
       <div className="relative overflow-hidden  ">
-        <img src={imageCover} alt="" className="w-full" />
+        <img src={imageCover} alt={`${title}image`} className="w-full" />
         <div className="layer bg-gray-500/40 absolute inset-1 gap-1 flex justify-center items-center opacity-0 group-hover/card:opacity-100 transition duration-500">
           <Link to={`/product/${id}`}>
             <Eye className="bg-main text-white h-8 w-8 rounded-full hover:text-main hover:bg-white cursor-pointer p-1 transition duration-500" />

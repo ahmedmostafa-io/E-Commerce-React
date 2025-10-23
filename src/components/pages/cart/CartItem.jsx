@@ -18,7 +18,11 @@ export default function CartItem({ products }) {
     <>
       <div className="md:flex md:justify-between md:items-center space-y-2 py-5">
         <div className="flex gap-8 justify-between">
-          <img src={imageCover} alt="" className="w-32 object-contain" />
+          <img
+            src={imageCover}
+            alt={`${brand.name}image`}
+            className="w-32 object-contain"
+          />
           <div className=" lg:space-y-5">
             <div>
               <h3 className="text-xl font-semibold text-main-light ">
